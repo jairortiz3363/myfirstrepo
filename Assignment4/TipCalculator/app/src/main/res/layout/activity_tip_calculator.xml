@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TipCalculatorActivity">
+
+    <TextView
+        android:id="@+id/checkAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:text="Check amount:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/partySize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Party size:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/checkAmount"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:text="Tip:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintStart_toStartOf="@+id/checkAmount"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/fifteenTotal"
+        app:layout_constraintStart_toStartOf="@+id/checkAmount" />
+
+    <Button
+        android:id="@+id/computeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="124dp"
+        android:text="Compute tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColorLink="#03A9F4"
+        app:icon="@color/white"
+        app:iconTint="#EFEBEB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <EditText
+        android:id="@+id/checkAmountValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/checkAmount"
+        app:layout_constraintStart_toEndOf="@+id/checkAmount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/partySizeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@id/partySize"
+        app:layout_constraintStart_toEndOf="@+id/partySize" />
+
+    <TextView
+        android:id="@+id/fifteenTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="15%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/tip"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <TextView
+        android:id="@+id/twentyTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:text="20%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/fifteenPercentTipValue"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <TextView
+        android:id="@+id/twentyFiveTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:text="25%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyPercentTipValue"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <TextView
+        android:id="@+id/fifteenTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:text="15%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/fifteenPercentTotalValue"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/twentyTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="125dp"
+        android:text="20%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyPercentTotalValue"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <TextView
+        android:id="@+id/twentyFiveTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="225dp"
+        android:text="25%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyfivePercentTotalValue"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <EditText
+        android:id="@+id/fifteenPercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/fifteenTip"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <EditText
+        android:id="@+id/twentyPercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyTip"
+        app:layout_constraintStart_toEndOf="@+id/tip" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTipValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="275dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyFiveTip"
+        app:layout_constraintStart_toEndOf="@+id/tip"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/fifteenPercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyTotal"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <EditText
+        android:id="@+id/twentyPercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/twentyFiveTotal"
+        app:layout_constraintStart_toEndOf="@+id/total" />
+
+    <EditText
+        android:id="@+id/twentyfivePercentTotalValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="292dp"
+        android:ems="3"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/total"
+        app:layout_constraintTop_toBottomOf="@+id/checkAmount" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:text="TIP CALCULATOR"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
